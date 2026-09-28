@@ -1,8 +1,6 @@
-# Smallfish on Railway
+# Smallfish Railway setup
 
-This package starts the original Smallfish application with Telegram enabled:
-
-    python src/app.py --telegram
+This archive is configured to build with the included Dockerfile and start Smallfish directly.
 
 Required Railway Variables:
 - MEXC_API_KEY
@@ -10,8 +8,7 @@ Required Railway Variables:
 - TELEGRAM_BOT_TOKEN
 - TELEGRAM_CHAT_ID
 
-The MEXC credentials are required by the original Smallfish application even though
-Telegram is only the notification/control layer. The trading logic was not replaced
-with KELTRADER and no 15-minute KELTRADER scanner is included.
+The start command is:
+python src/app.py --telegram
 
-The repository's `config/default.yaml` is used as the application configuration.
+The application is configured for MEXC in config/default.yaml.
